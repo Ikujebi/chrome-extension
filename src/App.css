@@ -7,3 +7,8 @@
 .poppings{font-family: 'Poppins', sans-serif;}
 
 .inter{font-family: 'Inter', sans-serif;}
+
+/* Use a more specific selector */
+.ant-form-item-label > label.ant-form-item-required::before {
+  content: none; /* Hide the asterisk */
+}

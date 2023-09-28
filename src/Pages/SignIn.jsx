@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import axios from 'axios'
 import google from '../images/Google svg.png'
 import facebook from '../images/g10.png'
+import line from '../images/Line 18.png'
 
 
 const Signin = () => {
@@ -105,22 +106,25 @@ const Signin = () => {
         }
     };
 
-
+        const fakelog=()=>{
+            navigate("./dashboard")
+        }
 
 
     return (
         <div className=" grid-cols-2  h-[100svh] text-[#100A42] inter mt-[4rem] flex gap-[3rem]">
-            <div className="w-[10rem] mx-[2rem] inline-flex justify-center items-cente gap-2">
-                <img src={SailLogo} alt="SailLogo" className=" w-[3rem] h-[3rem]" />
-                <h1 className=" text-[#100A42] font-bold mt-2 text-[1.2rem]">HelpMeOut</h1>
+            <div className="w-[10rem] xl:ml-[3rem] mt-[3rem] inline-flex justify-center ">
+                <img src={SailLogo} alt="SailLogo" className=" w-[2.5rem] h-[2.5rem]" />
+                <h1 className=" text-[#100A42] font-bold mt-2 xl:text-[1.2rem] lg:text-[1.2rem] md:text-[.8rem]">HelpMeOut</h1>
             </div>
 
-            <div className="  justify-center m-auto my-[4rem] items-center text-[#141414] bg-white w-[25rem] border-[2px]">
+            <div className="  justify-center m-auto my-[9rem] items-center text-[#141414] bg-white xl:w-[30rem] md:w-[25rem] border-[1px] border-white">
                 <div >
                     <h1 className="text-center   text-2xl font-bold">Log in or Sign up</h1>
-                    <p className=" text-[.7rem]">Join millions of others in sharing successful moves on HelpMeOut</p>
+                    <p className=" text-[.7rem] w-[15rem] flex mx-auto justify-center">Join millions of others in sharing successful</p>
+                    <p className=" text-[.7rem] w-[15rem] flex mx-auto justify-center">moves on HelpMeOut</p>
                 </div>
-                <div>
+                <div className="px-1 mt-3">
                     <button className=" rounded-md border-[1px] w-full  border-[#141414] flex gap-4">
                         <div className=" flex mx-auto gap-3">
                             <img src={google} alt="google" className=" w-[1.6rem] h-[1.6rem]" />
@@ -134,9 +138,17 @@ const Signin = () => {
                 </div>
                 <div className="block justify-center items-center flex-col  h-80  ">
                     <div className="ml-[1.4rem]">
+
+                    <div className=" mt-[4rem] text-[#B9C2C8] flex gap-2">
+                        <img src={line} alt="line" className="  w-[10rem] h-[0.1rem] mt-[0.85rem]" />
+                        <p className=" mb-10">or</p>
+                        <img src={line} alt="line" className=" h-[0.1rem]  w-[10rem] mt-[0.85rem] " />
+                        
+                    </div>
                         <Form
                             layout="vertical"
-                            onFinish={loginHandler}
+                            className="  mr-4"
+                            onFinish={fakelog}
                             fields={[
                                 {
                                     name: "email",
@@ -151,6 +163,9 @@ const Signin = () => {
                             <Row>
                                 <Col span={24}>
                                     <Form.Item
+                                    label="Email Address"
+                                    name="email"
+                                    
                                         rules={[
                                             {
                                                 required: true,
@@ -163,7 +178,7 @@ const Signin = () => {
                                             name="email"
                                             type="email"
                                             id="email"
-                                            placeholder="Email Address"
+                                            placeholder="Enter your email address"
                                             className="py-3"
 
                                         />
@@ -172,6 +187,7 @@ const Signin = () => {
 
                                 <Col span={24}>
                                     <Form.Item
+                                    label="Password"
                                         rules={[
                                             {
                                                 required: true,
@@ -182,22 +198,18 @@ const Signin = () => {
                                         <Input.Password
                                             onChange={handleInputChange}
                                             name="password"
-                                            placeholder="Password"
+                                            placeholder="Enter your Password"
                                             type="password"
                                             id="password"
-                                            className="py-3"
+                                            className="py-3 !hover:border-grey-400"
                                         />
                                     </Form.Item>
-                                </Col>
-                                <div className="text-sm font-normal mb-2 pl-[1rem] text-[#75C2F6]">
-                                    <h6>Forgot password?</h6>
-                                </div>
-                                <Col span={24}>
+                              
                                     <Button
                                         loading={loading}
-                                        type="primary"
+                                        type="danger"
                                         htmlType="submit"
-                                        className="bg-[#134c98] flex items-center justify-center py-5"
+                                        className="bg-[#120B48] hover:bg-[#2C25A2] text-white flex items-center justify-center py-5"
                                         block
                                     >
                                         Sign In
