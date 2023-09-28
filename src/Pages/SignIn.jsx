@@ -20,10 +20,10 @@ const Signin = () => {
     const navigate = useNavigate();
 
     useLayoutEffect(() => {
-        document.title = "Welcome | Sail Admin Portal"
-        if (sessionStorage.getItem("user")) {
+        document.title = "Welcome | HelpMeOut Landing page"
+        
             window.location.href = "/dashboard"
-        }
+        
     })
 
     const [signInInfo, setsignInInfo] = useState({
