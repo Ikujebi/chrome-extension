@@ -17,7 +17,7 @@ function App() {
  
  
   return (
-    <div className='lato'>
+    <div className='inter'>
       <CustomNavbar />
       <Header />
       
