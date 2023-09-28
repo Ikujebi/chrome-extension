@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate  } from 'react-router-dom';
-import Layout from 'antd/es/layout/layout';
+import Layout from './components/Layout';
 import CustomNavbar from './components/CustomNavbar';
 import Header from './components/Header';
 import Footer from './components/Footer';

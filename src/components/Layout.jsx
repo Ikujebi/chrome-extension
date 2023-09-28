@@ -1,19 +1,15 @@
 
 import '../../src/index.css';
 import '../../src/App.css';
-import Header from './Home'
-import CustomNavbar from './sideBar'
-import Portfolio from './Portfolio'
-import Services from './MyServices';
-import Stack from './WhatIKnow';
-import Contact from './Contact'
-import Footer from './Footer'
+import Header from './Header'
+import CustomNavbar from './CustomNavbar'
 
 
 
 
 
-function App() {
+
+function Layout() {
  
  
   return (
@@ -27,5 +23,5 @@ function App() {
   )
 }
 
-export default App
+export default Layout
 
