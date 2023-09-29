@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+import ScrollToSection from '../components/ScrollToSection ';
+
 import Logo from './logo';
 import { Link } from 'react-router-dom';
 
@@ -8,13 +10,7 @@ const SideBar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const componentRef = useRef(null);
 
-  const options = [
-    { label: 'Home', value: 'home' },
-    { label: 'About', value: 'about' },
-    { label: 'Portfolio', value: 'portfolio' },
-    { label: 'Blog', value: 'blog' },
-    { label: 'Contact', value: 'contact' },
-  ];
+ 
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
@@ -68,6 +64,13 @@ const SideBar = () => {
     };
   }, []);
 
+  const scrollToFeatures = () => {
+    const featuresElement = document.getElementById('features');
+    if (featuresElement) {
+      featuresElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div ref={componentRef} className=' mb-[5rem] text-[#100A42]'>
       
@@ -76,7 +79,9 @@ const SideBar = () => {
             <div className="flex items-center justify-between">
               <Logo/>
               <div className="responsive font-semibold flex gap-4">
-              <Link to={"/features"}> <h1>Features</h1></Link> 
+              <ScrollToSection to="#features">
+                <h1>Features</h1>
+              </ScrollToSection> 
                 <h1>How It Works</h1>
               </div>
 

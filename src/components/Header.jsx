@@ -9,7 +9,7 @@ import greengrid from "../images/grid.136a9256d16888900db0.svg (1).png";
 const Header = () => {
   const [loading, setloading] = useState(false);
   return (
-    <div className="sora text-[#141414] flex justify-around ">
+    <div className="sora text-[#141414] flex justify-around bg-white h-[95svh]">
       <div>
         <div className="xl:text-[2rem] lg:text-2rem text-[1.9rem] font-bold mt-[15rem]">
           <h1>Show Them</h1>
