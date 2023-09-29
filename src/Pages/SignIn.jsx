@@ -19,12 +19,7 @@ const Signin = () => {
 
     const navigate = useNavigate();
 
-    useLayoutEffect(() => {
-        document.title = "Welcome | HelpMeOut Landing page"
-        
-            window.location.href = "/dashboard"
-        
-    })
+    
 
     const [signInInfo, setsignInInfo] = useState({
         email: '',
@@ -85,7 +80,7 @@ const Signin = () => {
                         sessionStorage.setItem("role", response.data.data.role);
                         setMessage('Login successful');
                         console.log('before nav');
-                        navigate('/dashboard');
+                        
                         console.log('after nav');
                     }
                 } else {
@@ -106,9 +101,7 @@ const Signin = () => {
         }
     };
 
-        const fakelog=()=>{
-            navigate("./dashboard")
-        }
+        
 
 
     return (
@@ -148,7 +141,7 @@ const Signin = () => {
                         <Form
                             layout="vertical"
                             className="  mr-4"
-                            onFinish={fakelog}
+                            onFinish={loginHandler}
                             fields={[
                                 {
                                     name: "email",

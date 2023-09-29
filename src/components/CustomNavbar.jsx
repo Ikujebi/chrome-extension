@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+import Logo from './logo';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -67,16 +69,19 @@ const SideBar = () => {
   }, []);
 
   return (
-    <div ref={componentRef} className='mt-'>
+    <div ref={componentRef} className=' mb-[5rem] text-[#100A42]'>
       
-        <nav className="bg-white py-4 w-full top-0 fixed z-10 px-2">
+        <nav className="bg-white py-4 w-full top-0 fixed z-10 flex shadow-md hover:shadow-xl px-1 hover:bg-blue-100">
           <div className="container mx-auto">
             <div className="flex items-center justify-between">
-              <div className="logo text-gray-700 text-2xl font-bold">
-                <a href="index.html">AYANFE</a>
+              <Logo/>
+              <div className="responsive font-semibold flex gap-4">
+              <Link to={"/features"}> <h1>Features</h1></Link> 
+                <h1>How It Works</h1>
               </div>
-              <div className="responsive">
-                <i data-icon="m" className="ion-navicon-round text-white"></i>
+
+              <div className=' font-bold text-2xl'>
+                <h1>Get Started</h1>
               </div>
              
             </div>
