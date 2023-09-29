@@ -9,13 +9,13 @@ const YourVideoIsReady = () => {
 <div>
     <main>
         <section>
-            <h1>
+            <h1 className=' text-[1.3rem] font-semibold text-[#141414]'>
             Your video is ready!
             </h1>
-            <h2>
+            <h2 className=' text-[.7rem]'>
             Name  
             </h2>
-            <h2 className='flex'>
+            <h2 className='flex text-[#413C6D] text-[.89rem]'>
             Untitled_Video_20232509 
             <img src={edit} alt="edit" className=' w-[1.2rem] h-[1.2rem]'/>
             </h2>
