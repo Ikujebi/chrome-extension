@@ -82,7 +82,10 @@ const SideBar = () => {
               <ScrollToSection to="#features">
                 <h1>Features</h1>
               </ScrollToSection> 
-                <h1>How It Works</h1>
+              <ScrollToSection to="#howItWorks">
+              <h1>How It Works</h1>
+              </ScrollToSection> 
+                
               </div>
 
               <div className=' font-bold text-2xl'>

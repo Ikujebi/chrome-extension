@@ -1,6 +1,8 @@
 import Header from '../components/Header'
 import CustomNavbar from '../components/CustomNavbar'
+import Footer from '../components/Footer'
 import Features from './Features'
+import HowItWorks from '../components/HowItWorks'
 
 
 
@@ -16,6 +18,8 @@ function Dashboard() {
       <CustomNavbar />
       <Header />
       <Features />
+      <HowItWorks />
+      <Footer/>
       
       
     </div>
