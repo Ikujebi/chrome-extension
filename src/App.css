@@ -19,3 +19,8 @@
 .ant-form-item-label > label.ant-form-item-required::before {
   content: none; /* Hide the asterisk */
 }
+
+
+.ant-select-focused .ant-select-selector {
+  border-color: gray !important; /* Adjust the color as needed */
+}

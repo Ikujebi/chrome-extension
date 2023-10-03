@@ -6,6 +6,8 @@ import Features from './Pages/Features';
 import HowItWorks from './components/HowItWorks';
 import Footer from './components/Footer'
 import YourVideoIsReady from './Pages/YourVideoIsReady'
+import LandingPage from './Pages/LandingPage';
+import VideoRepo from './Pages/VideoRepo';
 
 
 const App = () => {
@@ -13,6 +15,8 @@ const App = () => {
     <Routes >
       <Route path='/login' element={<SignIn/>} />
       <Route path='/' element={<Layout/>} />
+      <Route path='/landing' element={<LandingPage/>} />
+      <Route path='/videoRepo' element={<VideoRepo/>} />
      
       <Route path='/feature' element={<Features/>} />
       <Route path='/howItWorks' element={<HowItWorks/>} />

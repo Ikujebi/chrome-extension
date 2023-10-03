@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import ScrollToSection from '../components/ScrollToSection ';
+import ScrollToSection from './ScrollToSection ';
 
 import Logo from './logo';
 import { Link } from 'react-router-dom';
