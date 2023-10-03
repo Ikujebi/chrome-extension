@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import YourVideoIsReady from './Pages/YourVideoIsReady'
 import LandingPage from './Pages/LandingPage';
 import VideoRepo from './Pages/VideoRepo';
+import Popup from './Pages/Popup';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
       <Route path='/howItWorks' element={<HowItWorks/>} />
       <Route path='/footer' element={<Footer/>} />
       <Route path='/yourVideoIsReady' element={<YourVideoIsReady/>} />
+      <Route path='/popup' element={<Popup/>} />
       
     
     </Routes>

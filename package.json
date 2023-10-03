@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@syncfusion/ej2-react-buttons": "^23.1.36",
     "antd": "^5.9.4",
     "axios": "^1.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.16.0",
+    "react-switch": "^7.0.0",
+    "react-toggle-switch": "^3.0.4",
     "recordrtc": "^5.6.2"
   },
   "devDependencies": {

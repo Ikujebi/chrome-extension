@@ -22,14 +22,14 @@
     "https://*/"
     
   ],
+  "chrome_url_overrides": {
+    "newtab": "index.html" 
+}, 
 
     "permissions": ["desktopCapture","storage"],
 
-    "version": "1.0.0",
+    "version": "1.0.0"
 
-    "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    
   }
   
