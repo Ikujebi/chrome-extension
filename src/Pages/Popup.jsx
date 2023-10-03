@@ -10,4 +10,9 @@ const Popup = () => {
   );
 };
 
-ReactDOM.render(<Popup />, document.getElementById('root'));
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(<Popup />, document.getElementById('root'));
+});
+
+
+export default Popup;

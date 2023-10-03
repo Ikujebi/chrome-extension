@@ -17,13 +17,9 @@
      
   }},
 
-  "host_permissions":[
-    "http://*",
-    "https://*",
-    "activeTab"
-  ],
+  
 
-    "permissions": ["desktopCapture"],
+    "permissions": ["desktopCapture","storage"],
 
     "version": "1.0.0"
   }
