@@ -9,7 +9,7 @@
   },
   
   "action": {
-    "default_popup":"popup.html",
+    "default_popup":"index.html",
     "icon":{
       "16": "./src/images/Layer 1.png",
       "32": "./src/images/Layer 1.png",
@@ -17,10 +17,19 @@
      
   }},
 
-  
+  "host_permissions":[
+    "http://*/",
+    "https://*/"
+    
+  ],
 
     "permissions": ["desktopCapture","storage"],
 
-    "version": "1.0.0"
+    "version": "1.0.0",
+
+    "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
   }
   

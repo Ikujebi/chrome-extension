@@ -1,11 +1,12 @@
 // Popup.js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ScreenRecorder from './ScreenRecorder';
 
 const Popup = () => {
   return (
     <div>
-      <h1>Hello from React Popup!</h1>
+      <ScreenRecorder/>
     </div>
   );
 };

@@ -12,10 +12,15 @@ const rootElement = isExtensionPopup ? document.getElementById('root-popup') : d
 
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Router>
-    {isExtensionPopup ? <Popup /> : <App />}
-    </Router>
-  </React.StrictMode>,
-)
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <Router>
+        {isExtensionPopup ? <Popup /> : <App />}
+      </Router>
+    </React.StrictMode>
+  );
+} else {
+  console.error('Root element not found. Make sure your HTML has an element with the ID "root" or "root-popup".');
+}
+
