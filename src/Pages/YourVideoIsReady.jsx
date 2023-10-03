@@ -13,7 +13,7 @@ import { Modal, Button } from 'antd';
 import {useState} from 'react'
 
 const YourVideoIsReady = () => {
-
+  const [selectedLanguage, setSelectedLanguage] = useState('english');
   const [visible, setVisible] = useState(false);
 
   const showModal = () => {
@@ -33,7 +33,17 @@ const YourVideoIsReady = () => {
     // Logic for saving video
     showModal();
   };
+  function handleTranscriptChange(value) {
+    setSelectedLanguage(value);
+  }
 
+  const transcripts = {
+    english:"First step. Open Facebook on your desktop or mobile device and locate 'Marketplace' in the left-hand menu or at the top of the",
+    french:"Première étape. Ouvrez Facebook sur votre ordinateur de bureau ou votre appareil mobile et localisez 'Marketplace' dans le menu de gauche ou en haut de l'écran.",
+    spanish:"Primer paso. Abre Facebook en tu computadora de escritorio o dispositivo móvil y localiza 'Marketplace' en el menú de la izquierda o en la parte superior de la pantalla."
+  }
+
+  const selectedTranscript = transcripts[selectedLanguage];
 
   return (
     <div className="sora">
@@ -105,23 +115,30 @@ const YourVideoIsReady = () => {
           </div>
           <div>
           <h2>Transcript</h2>
-          <p>
-          English
-          </p>
+          <Select
+           defaultValue="English" 
+           style={{ width: 120 }} 
+           onChange={handleTranscriptChange}
+           dropdownStyle={{ borderColor: '#ccc' }}  // Set the border color for the dropdown
+           className="border-gray">
+      <Option value="english">English</Option>
+      <Option value="french" >French</Option>
+      <Option value="spanish">Spanish</Option>
+    </Select>
           
           <article className='flex gap-2 text-[.53rem]'>
           <p>0.01</p>
-          <p className="font-bold">First step. Open Facebook on your desktop or mobile device and locate "Marketplace" in the left-hand menu or at the top of the </p>
+          <p className="font-bold">{selectedTranscript}</p>
           
           </article>
           <article className='flex gap-2 text-[.53rem]'>
           <p>0.15</p>
-          <p className="font-bold">First step. Open Facebook on your desktop or mobile device and locate "Marketplace" in the left-hand menu or at the top of the </p>
+          <p className="font-bold">{selectedTranscript}</p>
           
           </article>
           <article className='flex gap-2 text-[.53rem]'>
           <p>0.30</p>
-          <p className="font-bold">First step. Open Facebook on your desktop or mobile device and locate "Marketplace" in the left-hand menu or at the top of the  </p>
+          <p className="font-bold">{selectedTranscript}</p>
           
           </article>
           

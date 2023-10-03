@@ -1,4 +1,30 @@
 {
-    "permissions": ["desktopCapture"]
+  "manifest_version": 3,
+  "name": "HelpMeOut Video recorder",
+  "description": "it records user's screen",
+  "icons": {
+    "16": "./src/images/Layer 1.png",
+    "32": "./src/images/Layer 1.png",
+    "120": "./src/images/Layer 1.png"
+  },
+  
+  "action": {
+    "default_popup":"popup.html",
+    "icon":{
+      "16": "./src/images/Layer 1.png",
+      "32": "./src/images/Layer 1.png",
+      "120": "./src/images/Layer 1.png"
+     
+  }},
+
+  "host_permissions":[
+    "http://*",
+    "https://*",
+    "activeTab"
+  ],
+
+    "permissions": ["desktopCapture"],
+
+    "version": "1.0.0"
   }
   

@@ -1,4 +1,3 @@
-import React from "react";
 import logoimg from "../images/Layer 1.png"
 
 const logo = () => {
