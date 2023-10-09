@@ -77,7 +77,7 @@ const SideBar = () => {
         <nav className="bg-white py-4 w-full top-0 fixed z-10 flex shadow-md hover:shadow-xl px-1 hover:bg-blue-100">
           <div className="container mx-auto">
             <div className="flex items-center justify-between">
-              <Logo/>
+              <Link to={"/landing"}><Logo/></Link>
               <div className="responsive font-semibold flex gap-4">
               <ScrollToSection to="#features">
                 <h1>Features</h1>
