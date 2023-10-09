@@ -89,7 +89,7 @@ const SideBar = () => {
               </div>
 
               <div className=' font-bold text-2xl'>
-                <h1>Get Started</h1>
+               <Link to={"/login"}><h1>Get Started</h1> </Link> 
               </div>
              
             </div>

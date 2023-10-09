@@ -9,13 +9,16 @@ import video from "../images/video.png";
 import close from "../images/close-circle.png";
 import successKite from "../images/success-kite 1.png";
 import { Link } from "react-router-dom";
-import { Modal, Button } from 'antd';
+import { Modal, Button,Select } from 'antd';
 import {useState} from 'react'
 
 const YourVideoIsReady = () => {
+  const {Option} = Select
   const [selectedLanguage, setSelectedLanguage] = useState('english');
   const [visible, setVisible] = useState(false);
 
+
+  const vidUrl = "https://blue-alert-caiman.cyclic.cloud/api/video/streamVideo/uploadKey"
   const showModal = () => {
     setVisible(true);
   };
